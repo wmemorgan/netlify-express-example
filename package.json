@@ -1,0 +1,9 @@
+{
+  "name": "netlify-express",
+  "version": "1.0.0",
+  "description": "Example of a React client and Express backend deployed on Netlify",
+  "main": "api/server.js",
+  "repository": "git@github.com:wmemorgan/netlify-express.git",
+  "author": "Wilfred Morgan <wil.me.morgan@gmail.com>",
+  "license": "MIT"
+}
