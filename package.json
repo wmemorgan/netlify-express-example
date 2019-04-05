@@ -13,8 +13,8 @@
     "build": "run-p build:**",
     "build:app": "cd client && yarn build",
     "build:lambda": "netlify-lambda build api",
-    "deploy:draft": "yarn build && netlify deploy --dir=build --functions=functions",
-    "deploy:prod": "yarn build && netlify deploy --dir=build --functions=functions --prod"
+    "deploy:draft": "yarn build && netlify deploy --dir=client/build --functions=functions",
+    "deploy:prod": "yarn build && netlify deploy --dir=client/build --functions=functions --prod"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
