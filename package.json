@@ -10,8 +10,8 @@
     "start": "run-p start:**",
     "start:app": "cd client && yarn start",
     "start:lambda": "netlify-lambda serve api",
-    "prod": "run-p build:**",
-    "build:app": "cd client && yarn build",
+    "prod": "build:lambda; build:app",
+    "build:app": "yarn build",
     "build:lambda": "netlify-lambda build api",
     "deploy:draft": "yarn build && netlify deploy --dir=client/build --functions=functions",
     "deploy:prod": "yarn build && netlify deploy --dir=client/build --functions=functions --prod"
