@@ -11,7 +11,7 @@
     "start:app": "cd client && yarn start",
     "start:lambda": "netlify-lambda serve api",
     "prod": "yarn build:lambda; yarn build:app",
-    "build:app": "cd client && yarn run build",
+    "build:app": "cd client && yarn install && yarn run build",
     "build:lambda": "netlify-lambda build api",
     "deploy:draft": "yarn prod && netlify deploy --dir=client/build --functions=functions",
     "deploy:prod": "yarn prod && netlify deploy --dir=client/build --functions=functions --prod"
