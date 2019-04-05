@@ -4,6 +4,8 @@
 /client/node_modules
 
 # production
+/build
+/functions
 
 # misc
 .DS_Store
