@@ -8,13 +8,11 @@
   "license": "MIT",
   "scripts": {
     "start": "run-p start:**",
-    "start:app": "cd client && yarn start",
+    "start:app": "cd client && REACT_APP_API_ENDPOINT='http://localhost:9000/' yarn start",
     "start:lambda": "netlify-lambda serve api",
     "prod": "yarn build:lambda; yarn build:app",
     "build:app": "cd client && yarn install && yarn run build",
-    "build:lambda": "netlify-lambda build api",
-    "deploy:draft": "yarn prod && netlify deploy --dir=client/build --functions=functions",
-    "deploy:prod": "yarn prod && netlify deploy --dir=client/build --functions=functions --prod"
+    "build:lambda": "netlify-lambda build api"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
